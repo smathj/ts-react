@@ -1,4 +1,10 @@
+import {ChangeEvent} from 'react'
+
 export default function VariousInputs() {
+  const onRange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value)
+  }
+
   return (
     <div>
       <p>VariousInputs</p>
@@ -6,7 +12,7 @@ export default function VariousInputs() {
         <input type="text" placeholder="enter some texts" />
         <input type="password" placeholder="enter your password" />
         <input type="email" placeholder="enter email address" />
-        <input type="range" />
+        <input type="range" onChange={onRange} />
         <input type="button" value="I'm a button" />
         <input type="checkbox" value="I'm a checkbox" defaultChecked />
         <input type="radio" value="I'm a radio" defaultChecked />
