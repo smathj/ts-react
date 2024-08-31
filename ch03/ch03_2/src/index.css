@@ -1,0 +1,13 @@
+/*설치형으로 사용하므로 이제 제거 */
+/*npm i @fontsource/material-icons*/
+/*@import url('https://fonts.googleapis.com/icon?family=Material+Icons');*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.meterial-icons {
+  font-family: 'Material Icons';
+  display: inline-block;
+}
