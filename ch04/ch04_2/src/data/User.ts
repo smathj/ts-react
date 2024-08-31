@@ -20,5 +20,5 @@ export const makeRandomUser = (): IUser =>
     C.randomName(),
     C.randomJobTitle(),
     C.randomEmail(),
-    I.randomAvatar()
+    I.randomAvatar() // 이미지 url
   )

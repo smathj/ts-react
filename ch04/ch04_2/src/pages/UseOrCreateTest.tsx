@@ -27,7 +27,7 @@ export default function UseOrCreateTest() {
       <tr key={user.uuid}>
         <th>{index + 1}</th>
         <td className="flex items-center">
-          <Avatar src={user.avatar} size="1.5rem" />
+          <Avatar src={user.avatar} size="1.5rem" /> {/*이미지*/}
           <p className="ml-2">{user.name}</p>
         </td>
         <td>{user.jobTitle}</td>
