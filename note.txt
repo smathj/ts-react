@@ -1,0 +1,31 @@
+npx create-react-app ch04_4 --template typescript && cd ch04_4
+
+
+
+
+
+메터리얼 아이콘 설치
+npm i @fontsource/material-icons
+
+
+1. 테일윈드 css 설치
+npm i -D postcss autoprefixer tailwindcss
+npx tailwindcss init -p
+
+2. daisyui 패키지 설치
+npm i -D daisyui
+
+3. @tailwindcss/line-clamp 설치 , 줄의 수를 제한 할 수 있음
+npm i -D @tailwindcss/line-clamp
+
+npm i -D postcss autoprefixer tailwindcss daisyui @tailwindcss/line-clamp
+
+
+[종합]
+npm i chance luxon @fontsource/material-icons
+npm i -D @types/chance @types/luxon postcss autoprefixer tailwindcss daisyui @tailwindcss/line-clamp
+
+
+cp -r ../ch04_3/src/* ./src
+cp -r ../ch04_3/*.js .
+rm src/pages/*
