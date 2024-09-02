@@ -10,7 +10,11 @@ export const useEventListener = (
 
     if (target && callback) {
       target.addEventListener(type, callback)
-      return () => target.removeEventListener(type, callback)
+      // clean up
+      return () => {
+        console.log('clean up : useEventListener')
+        target.removeEventListener(type, callback)
+      }
     }
   }, [target, type, callback])
 }

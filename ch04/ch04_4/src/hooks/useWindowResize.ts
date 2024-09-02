@@ -9,10 +9,16 @@ export const useWindowResize = () => {
     setWidthHeight(notUsed => [window.innerWidth, window.innerHeight])
   }, [])
 
+  //! 커스텀 훅
   // 창 크기가 변경 될 때마다 설정
-  useEventListener(window, 'resize', () => {
-    setWidthHeight(notUsed => [window.innerWidth, window.innerHeight])
-  })
+  // 화살표 함수 () => {...}는 컴포넌트가 렌더링될 때마다
+  // 새로 생성 그러기 때문에 클린업이 자주 발생
+  // prettier-ignore
+  useEventListener(
+      window,
+      'resize',
+      () => {    setWidthHeight(notUsed => [window.innerWidth, window.innerHeight])}
+  )
 
   return widthHeight
 }
