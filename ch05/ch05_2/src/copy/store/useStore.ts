@@ -1,14 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
-import {rootReducer} from './rootReducer'
 import {useMemo} from 'react'
+import {rootReducer} from './rootReducer'
 
 const initializeStore = () => {
-  // 리덕스 저장소 생성
   const store = configureStore({
-    reducer: rootReducer,
-    middleware: getDefaultMiddleware => getDefaultMiddleware()
+    reducer: rootReducer
   })
-
   return store
 }
 
